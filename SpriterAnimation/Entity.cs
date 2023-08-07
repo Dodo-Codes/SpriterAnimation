@@ -1,11 +1,7 @@
 namespace SpriterAnimation;
 
-public partial class Spriter
+internal class Entity
 {
-    private class Entity
-    {
-        string name;
-        CharacterMap[] characterMaps; // <character_map> tags
-        public Animation[] animations; // <animation> tags
-    }
+    public Dictionary<string, Bone> Bones { get; } = new();
+    public Dictionary<string, Animation> Animations { get; } = new();
 }
